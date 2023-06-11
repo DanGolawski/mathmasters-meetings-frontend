@@ -13,11 +13,11 @@ var options = {
 var api = new JitsiMeetExternalAPI(domain, options);
 
 
-fetch(`http://localhost:5000/meeting/start/${meetingId}`, {
+fetch(`http://localhost:5000/meeting/status`, {
    method: 'PUT',
+   body: JSON.stringify({
+      new_status: 'STARTED',
+      meeting_id: meetingId
+   }),
    headers: { 'Content-Type': 'application/json' },
-}).then(response => {
-   if (response.status >= 300) {
-      window.location.href = 'error.html';
-   }
-})
+}).catch(error => window.location.href = 'error.html');

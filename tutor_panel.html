@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+   <html lang="en">
+      <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Panel Korepetytora</title>
+      <link rel="icon" href="./resources/mathmasterslogo.ico" type="image/x-icon">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Ubuntu&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./styles/tutor_panel.css">
+      <script src="https://meet.jit.si/external_api.js"></script>
+      <script src="./js/tutor_panel.js" defer></script>
+   </head>
+   <body>
+      <div class="current-meeting-panel">
+         <div id="meeting-screen"></div>
+         <div class="file-control">
+            <h1>Przed wyjściem wgraj tablicę:</h1>
+            <label>Wgraj tablicę</label>
+            <input type="file" accept="image/png" id="file-uploader">
+         </div>
+         <div class="meeting-control">
+            <button onclick="closeMeeting()" class="info">Zakończ spotkanie</button>
+            <button onclick="cancelMeeting()" class="danger">Anuluj spotkanie</button>
+         </div>
+      </div>
+      <div class="meetings-panel">
+         <h1 class="waiting-clients-header">Liczba oczekujących: <span id="waiting-clients-number"></span></h1>
+         <button onclick="joinMeeting()">Dołącz do spotkania</button>
+      </div>
+      </div>
+      
+   </body>
+</html>

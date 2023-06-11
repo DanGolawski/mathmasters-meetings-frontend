@@ -1,0 +1,102 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: #023d69;
+   color: white;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   font-family: 'Kanit', sans-serif;
+   font-family: 'Ubuntu', sans-serif;
+}
+
+.registration-form {
+   display: flex;
+   flex-direction: column;
+   padding-left: 2vw;
+   width: 50%;
+   min-width: 400px;
+   align-items: center;
+}
+
+.registration-form h1 {
+   font-size: 4rem;
+   text-align: center;
+   margin-bottom: 40px;
+}
+
+.registration-form img {
+   width: 400px
+}
+
+.form-fields {
+   background-color: white;
+   color: #023d69;
+   border-radius: 5px 50px 5px 50px;
+   padding: 40px;
+}
+
+.form-fields input, .form-fields label {
+   font-size: 2rem;
+   width: 90%;
+   margin-bottom: 20px;
+}
+
+.form-fields input {
+   padding: 10px;
+   color: #023d69;
+   border: 3px solid #023d69;
+}
+
+.form-fields p {
+   font-size: 1.5rem;
+   margin-bottom: 20px;
+}
+
+.form-fields button {
+   background-color: #023d69;
+   color: white;
+   font-size: 1.5rem;
+   padding: 20px;
+   border-radius: 20px;
+
+}
+
+
+.instruction {
+   padding-top: 10vh;
+   padding-right: 2vw;
+   padding-left: 2vw;
+   flex: 1;
+   min-width: 300px;
+}
+
+.instruction h1 {
+   margin-bottom: 20px;
+   font-size: 2.5rem;
+}
+
+.usefull-links {
+   margin-top: 200px;
+}
+
+.usefull-link-container {
+   border: 1px solid white;
+   padding: 30px;
+   border-radius: 5px 30px 5px 30px;
+   margin-bottom: 30px;
+   cursor: pointer;
+}
+
+.usefull-link-container:hover {
+   background-color: white;
+   color: #023d69;
+}
+
+a {
+   color: white;
+   text-decoration: none;
+}

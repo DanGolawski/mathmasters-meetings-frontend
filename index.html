@@ -4,15 +4,46 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>My Website</title>
-      <link rel="stylesheet" href="./style.css">
-      <link rel="icon" href="./favicon.ico" type="image/x-icon">
+      <title>MathMasters - nowe spotkanie</title>
+      <link rel="icon" href="./resources/mathmasterslogo.ico" type="image/x-icon">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Ubuntu&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./styles/index.css">
+      <script src="./js/index.js" defer></script>
    </head>
    <body>
-      <label for="fname">Email</label>
-      <input type="email" name="email" id="email">
-      <button onclick="submitForm()">Dołącz do spotkania</button>
-       
-      <script src="index.js"></script>
+      <div class="registration-form">
+         <img class="math-masters-logo" src="./resources/mathmasterslogo.png">
+         <div class="form-fields">
+            <h1>Dołącz do spotkania:</h1>
+            <label for="fname">Podaj swój Email</label>
+            <input type="email" name="email" id="email" placeholder="twoj.email@domain.pl">
+            <p>Na ten mail wyślemy link do spotkania</p>
+            <button onclick="submitForm()">Dołącz do spotkania</button>
+         </div>
+      </div>
+      <div class="instruction">
+         <h1>1. Wpisz swój email</h1>
+         <h1>2. Otrzymasz wiadomość z linkiem do spotkania</h1>
+         <h1>3. Po krótkim czasie dołączy twój korepetytor</h1>
+         <h1>4. Po przeprowadzonych korepetycjach otrzymasz notatki z zajęć</h1>
+
+         <div class="usefull-links">
+            <h1>Zobacz również inne aplikacje, które pomogą Ci w nauce!</h1>
+            <a href="https://dangolawski.github.io/math-app/home">
+               <div class="usefull-link-container">
+                  <h3>MathApp</h3>
+                  <p>Aplikacja z rozwiązaniami zadań i wyjaśnieniami w postaci krótkich filmików</p>
+               </div>
+            </a>
+            <a href="https://medium.com/@mathmasters.contact">
+               <div class="usefull-link-container">
+                  <h3>Nasz Blog</h3>
+                  <p>Znajdziesz tu opracowania twojej książki do Matematyki</p>
+               </div>
+            </a>
+         </div>
+      </div>   
    </body>
 </html>

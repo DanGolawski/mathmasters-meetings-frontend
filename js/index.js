@@ -1,11 +1,16 @@
 function submitForm() {
+   const emailInput = document.querySelector('#email');
+   if (!emailInput.value) {
+      alert('Wpisz swój email!');
+      return;
+   }
    let url = window.location.href.split('/')
    url.pop();
    url = url.join('/');
    fetch("http://localhost:5000/meeting/request", {
       method: "POST",
       body: JSON.stringify({
-         email: document.querySelector('#email').value,
+         email: emailInput.value,
          domain: url
       }),
       headers: {
