@@ -7,7 +7,7 @@ function submitForm() {
    let url = window.location.href.split('/')
    url.pop();
    url = url.join('/');
-   fetch("http://localhost:5000/meeting/request", {
+   fetch("https://mathmasters-meetings-backend.onrender.com/meeting/request", {
       method: "POST",
       body: JSON.stringify({
          email: emailInput.value,
