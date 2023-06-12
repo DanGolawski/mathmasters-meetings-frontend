@@ -1,4 +1,5 @@
 function submitForm() {
+   showLoader();
    const emailInput = document.querySelector('#email');
    if (!emailInput.value) {
       alert('Wpisz swój email!');
@@ -20,6 +21,7 @@ function submitForm() {
       if (response.status >= 300) {
          window.location.href = 'error.html';
       } else {
+         hideLoader()
          window.location.href = 'success.html';
       }
    });

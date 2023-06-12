@@ -10,7 +10,9 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Ubuntu&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="./styles/index.css">
+      <link rel="stylesheet" href="./styles/loader.css">
       <script src="./js/index.js" defer></script>
+      <script src="./js/loader.js" defer></script>
    </head>
    <body>
       <div class="registration-form">
@@ -21,6 +23,7 @@
             <input type="email" name="email" id="email" placeholder="twoj.email@domain.pl">
             <p>Na ten mail wyślemy link do spotkania</p>
             <button onclick="submitForm()">Dołącz do spotkania</button>
+            <div class="loader"></div>
          </div>
       </div>
       <div class="instruction">
@@ -44,6 +47,7 @@
                </div>
             </a>
          </div>
-      </div>   
+      </div>
+
    </body>
 </html>

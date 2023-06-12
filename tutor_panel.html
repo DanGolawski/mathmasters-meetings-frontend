@@ -10,8 +10,10 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Ubuntu&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="./styles/tutor_panel.css">
+      <link rel="stylesheet" href="./styles/loader.css">
       <script src="https://meet.jit.si/external_api.js"></script>
       <script src="./js/tutor_panel.js" defer></script>
+      <script src="./js/loader.js"></script>
    </head>
    <body>
       <div class="current-meeting-panel">
@@ -24,6 +26,7 @@
          <div class="meeting-control">
             <button onclick="closeMeeting()" class="info">Zakończ spotkanie</button>
             <button onclick="cancelMeeting()" class="danger">Anuluj spotkanie</button>
+            <div class="loader loader-white"></div>
          </div>
       </div>
       <div class="meetings-panel">
@@ -31,6 +34,5 @@
          <button onclick="joinMeeting()">Dołącz do spotkania</button>
       </div>
       </div>
-      
    </body>
 </html>

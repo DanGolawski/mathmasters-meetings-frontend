@@ -18,7 +18,8 @@ function displayNumberOfClients(numberOfClients) {
 function joinMeeting() {
    if (!waitingMeetingId || waitingMeetingId === 0) {
       return;
-   } 
+   }
+   showLoader()
    meetingInProgress = waitingMeetingId;
    openJitsiMeeting(meetingInProgress);
    setMeetingAsInProgress(meetingInProgress);
@@ -30,6 +31,7 @@ function closeMeeting() {
       alert('Wyślij tablicę!');
       return;
    }
+   showLoader()
    const file = uploadedFiles[0];
    const reader  = new FileReader();
    reader.readAsDataURL(file);
@@ -44,12 +46,14 @@ function closeMeeting() {
       })
       .then(res => res.json())
       .then(data => window.location.reload())
-      .catch(err => alert(err));
+      .catch(err => alert(err))
+      .finally(hideLoader);
    }
    
  }
 
 function cancelMeeting() {
+   showLoader();
    fetch(`https://mathmasters-meetings-backend.onrender.com/meeting/status`, {
       method: 'PUT',
       body: JSON.stringify({
@@ -59,7 +63,8 @@ function cancelMeeting() {
       headers: { 'Content-Type': 'application/json' },
    })
    .then(response => response.json()).then(response => alert('Anulowano spotkanie'))
-   .catch(error => alert('Nie udało się anulować spotkania'));
+   .catch(error => alert('Nie udało się anulować spotkania'))
+   .finally(hideLoader);
 }
 
 function openJitsiMeeting(meetingId) {
@@ -81,5 +86,6 @@ function setMeetingStatusAsInProgress(meetingId) {
          meeting_id: meetingId
       }),
       headers: { 'Content-Type': 'application/json' },
-   }).catch(error => alert('nie udało się zmienić statusu spotkania!'));
+   }).catch(error => alert('nie udało się zmienić statusu spotkania!'))
+   .finally(hideLoader);
 }
