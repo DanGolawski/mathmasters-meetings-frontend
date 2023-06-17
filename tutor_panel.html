@@ -1,38 +1,50 @@
 <!DOCTYPE html>
-   <html lang="en">
-      <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Panel Korepetytora</title>
-      <link rel="icon" href="./resources/mathmasterslogo.ico" type="image/x-icon">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Ubuntu&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="./styles/tutor_panel.css">
-      <link rel="stylesheet" href="./styles/loader.css">
-      <script src="https://meet.jit.si/external_api.js"></script>
-      <script src="./js/tutor_panel.js" defer></script>
-      <script src="./js/loader.js"></script>
-   </head>
-   <body>
-      <div class="current-meeting-panel">
-         <div id="meeting-screen"></div>
-         <div class="file-control">
-            <h1>Przed wyjściem wgraj tablicę:</h1>
-            <label>Wgraj tablicę</label>
-            <input type="file" accept="image/png" id="file-uploader">
-         </div>
-         <div class="meeting-control">
-            <button onclick="closeMeeting()" class="info">Zakończ spotkanie</button>
-            <button onclick="cancelMeeting()" class="danger">Anuluj spotkanie</button>
-            <div class="loader loader-white"></div>
-         </div>
-      </div>
-      <div class="meetings-panel">
-         <h1 class="waiting-clients-header">Liczba oczekujących: <span id="waiting-clients-number"></span></h1>
-         <button onclick="joinMeeting()">Dołącz do spotkania</button>
-      </div>
-      </div>
-   </body>
+<html lang="pl">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./styles/tutor_panel.css">
+   <link rel="stylesheet" href="./styles/tutor_panel_menu.css">
+   <link rel="stylesheet" href="./styles/loader.css">
+   <title>Panel Korepetytora</title>
+   <script src="./js/global_data.js" defer></script>
+   <script src="./js/loader.js" defer></script>
+   <script src="./js/tutor_panel.js" defer></script>
+   <script src="./js/tutor_panel_menu.js" defer></script>
 </html>
+<body>
+   <nav class="panel top-nav">
+      <button class="control-button" onclick="showMenu()">Menu</button>
+      <div class="control-buttons-container">
+         <button class="control-button save" onclick="sendBoard()">Zapisz i wyślij</button>
+         <button class="control-button clear" onclick="clearBoard()">Wyczyść</button>
+         <button class="control-button cancel" onclick="cancelMeeting()">Anuluj spotkanie</button>
+      </div>
+      <div class="color-buttons-container">
+         <div class="color-button" data-color="blue"></div>
+         <div class="color-button" data-color="black"></div>
+         <div class="color-button" data-color="white"></div>
+         <div class="color-button" data-color="orange"></div>
+         <div class="color-button" data-color="red"></div>
+         <div class="color-button" data-color="green"></div>
+         <div class="color-button" data-color="pink"></div>
+      </div>
+   </nav>
+   <div class="canvas-container">
+      <canvas id="canvas"></canvas>
+   </div>
+   <div class="menu-panel">
+      <div class="top-menu-nav">
+         <span class="close-button" onclick="closeMenu()">&times</span>
+      </div>
+      <h1>Liczba oczekujących: <span id="waiting-clients-number"></span></h1>
+      <button class="menu-button" onclick="startMeeting()">Rozpocznij spotkanie</button>
+      <div class="loader"></div>
+      <hr>
+      <h1>Zaplanowane spotkania:</h1>
+      <div class="planned-meetings"></div>
+   </div>
+   <footer class="panel">
+      <button class="control-button" onclick="addPage()">Następna strona</button>
+   </footer>
+</body>

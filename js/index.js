@@ -9,8 +9,7 @@ function submitForm(button) {
    let url = window.location.href.split('/')
    url.pop();
    url = url.join('/');
-   // fetch("https://mathmasters-meetings-backend.onrender.com/meeting/request", {
-   fetch("https://mathmasters-meetings-backend.onrender.com/meeting/request", {
+   fetch(`${apiUrl}/meeting/request`, {
       method: "POST",
       body: JSON.stringify({
          email: emailInput.value,

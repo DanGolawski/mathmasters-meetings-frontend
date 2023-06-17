@@ -1,6 +1,8 @@
 body {
    background-color: #023d69;
    color: white;
+   font-family: 'Kanit', sans-serif;
+   font-family: 'Ubuntu', sans-serif;
 }
 
 h1, h2 {

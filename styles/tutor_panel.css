@@ -3,6 +3,11 @@
    padding: 0;
 }
 
+body {
+   font-family: 'Kanit', sans-serif;
+   font-family: 'Ubuntu', sans-serif;
+}
+
 .panel {
    display: flex;
    flex-direction: row;

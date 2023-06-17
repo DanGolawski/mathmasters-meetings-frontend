@@ -1,0 +1,12 @@
+body {
+   font-family: 'Kanit', sans-serif;
+   font-family: 'Ubuntu', sans-serif;
+   padding-top: 20vh;
+   background: rgb(2,61,105);
+   background: radial-gradient(circle, rgba(2,61,105,1) 0%, rgba(139,0,0,1) 100%);
+   color: white;
+}
+
+h1, h2 {
+   text-align: center;
+}

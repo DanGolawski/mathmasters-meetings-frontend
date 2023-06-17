@@ -26,7 +26,7 @@ function startMeeting() {
 }
 
 function markMeetingAsInProgress(meetingId) {
-   fetch(`https://mathmasters-meetings-backend.onrender.com/meetings/status/change`, {
+   fetch(`${apiUrl}/meetings/status/change`, {
       method: 'PUT',
       body: JSON.stringify({
          new_status: 'INPROGRESS',
@@ -37,7 +37,7 @@ function markMeetingAsInProgress(meetingId) {
 }
 
 function updateAndDisplayMeetingsStates() {
-   fetch('https://mathmasters-meetings-backend.onrender.com/meetings/states').then(res => res.json()).then(response => {
+   fetch(`${apiUrl}/meetings/states`).then(res => res.json()).then(response => {
       displayNumberOfClients(response.waiting_clients);
       updatePlannedMeetings(response.planned_meetings_statuses);
       longestWaitingMeetingId = response.longest_waiting_client;

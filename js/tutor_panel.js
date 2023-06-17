@@ -74,7 +74,7 @@ function sendBoard() {
 }
 
 function sendBoardImage(payload) {
-    fetch(`https://mathmasters-meetings-backend.onrender.com/meeting/close/${currentMeetingId}`, {
+    fetch(`${apiUrl}/meeting/close/${currentMeetingId}`, {
         method: "POST",
         body: payload,
     })

@@ -1,3 +1,13 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: 'Kanit', sans-serif;
+   font-family: 'Ubuntu', sans-serif;
+}
+
 .menu-panel {
    position: absolute;
    width: 30vw;
