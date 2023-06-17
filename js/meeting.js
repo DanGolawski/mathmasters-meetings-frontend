@@ -13,7 +13,7 @@ var options = {
 var api = new JitsiMeetExternalAPI(domain, options);
 
 
-fetch(`https://mathmasters-meetings-backend.onrender.com/meeting/status`, {
+fetch(`https://mathmasters-meetings-backend.onrender.com/meetings/status/change`, {
    method: 'PUT',
    body: JSON.stringify({
       new_status: 'STARTED',

@@ -1,4 +1,5 @@
-function submitForm() {
+function submitForm(button) {
+   button.disabled = true;
    showLoader();
    const emailInput = document.querySelector('#email');
    if (!emailInput.value) {
@@ -8,6 +9,7 @@ function submitForm() {
    let url = window.location.href.split('/')
    url.pop();
    url = url.join('/');
+   // fetch("https://mathmasters-meetings-backend.onrender.com/meeting/request", {
    fetch("https://mathmasters-meetings-backend.onrender.com/meeting/request", {
       method: "POST",
       body: JSON.stringify({

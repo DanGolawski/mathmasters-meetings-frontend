@@ -1,0 +1,55 @@
+.menu-panel {
+   position: absolute;
+   width: 30vw;
+   min-width: 300px;
+   height: 100vh;
+   top: 0;
+   background-color: #023d69;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   color: white;
+   padding: 20px;
+   transition: margin 1s;
+   -o-transition: margin 1s;
+   -moz-transition: margin 1s;
+   -webkit-transition: margin 1s;
+}
+
+.top-menu-nav {
+   text-align: right;
+}
+
+.close-button {
+   font-size: 4rem;
+   color: white;
+   cursor: pointer;
+}
+
+h1 {
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+hr {
+   border: 1px solid white;
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
+
+.menu-button {
+   width: 100%;
+   font-size: 1.2rem;
+   padding: 20px;
+   border: 2px solid white;
+   border-radius: 10px;
+   background-color: #023d69;
+   color: white;
+   cursor: pointer;
+}
+
+.menu-button:hover {
+   background-color: greenyellow;
+   color: black;
+}

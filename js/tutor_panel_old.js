@@ -8,7 +8,7 @@ function getNumberOfWaitingClients() {
    fetch('https://mathmasters-meetings-backend.onrender.com/waiting_clients').then(res => res.json()).then(response => {
       displayNumberOfClients(response.waiting_clients);
       waitingMeetingId = response.longest_waiting_client;
-   }).catch(error => console.log(error))
+   }).catch(error => console.log(error));
 }
 
 function displayNumberOfClients(numberOfClients) {
@@ -40,7 +40,7 @@ function closeMeeting() {
       const payload = new FormData();
       payload.append('image', file, 'image.png');
 
-      fetch(`https://mathmasters-meetings-backend.onrender.com/meeting/close/${meetingInProgress}`, {
+      fetch(`https://mathmasters-meetings-backend.onrender.com/meeting/close/202306142029094881`, {
          method: "POST",
          body: payload,
       })
@@ -54,7 +54,7 @@ function closeMeeting() {
 
 function cancelMeeting() {
    showLoader();
-   fetch(`https://mathmasters-meetings-backend.onrender.com/meeting/status`, {
+   fetch(`https://mathmasters-meetings-backend.onrender.com/meetings/status/change`, {
       method: 'PUT',
       body: JSON.stringify({
          new_status: 'CANCELED',
@@ -79,7 +79,7 @@ function openJitsiMeeting(meetingId) {
 }
 
 function setMeetingStatusAsInProgress(meetingId) {
-   fetch(`https://mathmasters-meetings-backend.onrender.com/meeting/status`, {
+   fetch(`https://mathmasters-meetings-backend.onrender.com/meetings/status/change`, {
       method: 'PUT',
       body: JSON.stringify({
          new_status: 'INPROGRESS',

@@ -18,6 +18,8 @@ h2 {
 
 h1, h2{
    -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+   -o-animation: 3s ease 0s normal forwards 1 fadein;
+   -moz-animation: 3s ease 0s normal forwards 1 fadein;
    animation: 3s ease 0s normal forwards 1 fadein;
 }
 

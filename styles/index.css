@@ -65,6 +65,10 @@ body {
    margin-bottom: 10px;
 }
 
+button:disabled {
+   opacity: 0.3;
+}
+
 
 .instruction {
    padding-top: 10vh;
